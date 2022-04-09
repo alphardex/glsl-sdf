@@ -1,0 +1,8 @@
+{
+  "name": "glsl-sdf",
+  "version": "1.0.0",
+  "description": "GLSL sdf functions collection.",
+  "main": "index.js",
+  "author": "alphardex",
+  "license": "MIT"
+}
