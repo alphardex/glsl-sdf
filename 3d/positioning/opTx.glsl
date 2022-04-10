@@ -64,7 +64,7 @@ mat4 inverse(mat4 m){
     a20*b03-a21*b01+a22*b00)/det;
 }
 
-vec3 opTx(in vec3 p,in mat4 m)
+vec3 opTx(vec3 p,mat4 m)
 {
     return vec3(inverse(m)*vec4(p,1.));
 }

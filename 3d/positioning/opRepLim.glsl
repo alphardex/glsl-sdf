@@ -1,7 +1,6 @@
-vec3 opRepLim(in vec3 p,in float c,in vec3 l)
+float opRepLim(in float p,in float s,in float lima,in float limb)
 {
-    vec3 q=p-c*clamp(round(p/c),-l,l);
-    return vec3(q);
+    return p-s*clamp(round(p/s),lima,limb);
 }
 
 #pragma glslify:export(opRepLim)

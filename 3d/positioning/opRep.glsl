@@ -1,7 +1,6 @@
-vec3 opRep(in vec3 p,in vec3 c)
+vec3 opRep(vec3 p,vec3 c)
 {
-    vec3 q=mod(p+.5*c,c)-.5*c;
-    return vec3(q);
+    return mod(p,c)-.5*c;
 }
 
 #pragma glslify:export(opRep)
