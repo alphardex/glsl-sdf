@@ -1,3 +1,6 @@
+float dot2(in vec2 v){return dot(v,v);}
+float dot2(in vec3 v){return dot(v,v);}
+
 float udTriangle(vec3 p,vec3 a,vec3 b,vec3 c)
 {
     vec3 ba=b-a;vec3 pa=p-a;
