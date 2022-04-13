@@ -1,9 +1,10 @@
-vec3 opCheapBend(vec3 p)
+vec3 opCheapBend(vec3 p,float k)
 {
-    float c=cos(20.*p.y);
-    float s=sin(20.*p.y);
+    float c=cos(k*p.y);
+    float s=sin(k*p.y);
     mat2 m=mat2(c,-s,s,c);
-    return vec3(m*p.xy,p.z);
+    vec3 q=vec3(m*p.xy,p.z);
+    return q;
 }
 
 #pragma glslify:export(opCheapBend)

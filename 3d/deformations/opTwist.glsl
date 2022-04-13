@@ -1,9 +1,10 @@
-vec3 opTwist(vec3 p)
+vec3 opTwist(vec3 p,float k)
 {
-    float c=cos(10.*p.y+10.);
-    float s=sin(10.*p.y+10.);
+    float c=cos(k*p.y);
+    float s=sin(k*p.y);
     mat2 m=mat2(c,-s,s,c);
-    return vec3(m*p.xz,p.y);
+    vec3 q=vec3(m*p.xz,p.y);
+    return q;
 }
 
 #pragma glslify:export(opTwist)
