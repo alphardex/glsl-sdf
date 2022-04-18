@@ -50,4 +50,13 @@ float sdBezier3D(in vec3 pos,in vec2 A,in vec2 B,in vec2 C,in float h)
     return opExtrusion(pos,sdBezier(pos.xy,A,B,C),h);
 }
 
+float sdBezier3D(in vec3 pos,in vec2 A,in vec2 B,in vec2 C,in float xMax,in float yMax,in float zMax)
+{
+    vec2 xyMax=vec2(xMax,yMax);
+    vec2 v0=xyMax*cos(A*PI);
+    vec2 v1=xyMax*cos(B*PI);
+    vec2 v2=xyMax*cos(C*PI);
+    return sdBezier3D(pos,v0,v1,v2,zMax);
+}
+
 #pragma glslify:export(sdBezier3D)
