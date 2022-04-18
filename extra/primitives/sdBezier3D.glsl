@@ -50,6 +50,8 @@ float sdBezier3D(in vec3 pos,in vec2 A,in vec2 B,in vec2 C,in float h)
     return opExtrusion(pos,sdBezier(pos.xy,A,B,C),h);
 }
 
+const float PI=3.14159265359;
+
 float sdBezier3D(in vec3 pos,in vec2 A,in vec2 B,in vec2 C,in float xMax,in float yMax,in float zMax)
 {
     vec2 xyMax=vec2(xMax,yMax);
