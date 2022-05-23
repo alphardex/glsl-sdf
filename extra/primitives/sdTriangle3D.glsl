@@ -31,6 +31,8 @@ float sdTriangle3D(in vec3 pos,in vec2 p0,in vec2 p1,in vec2 p2,in float h)
     return opExtrusion(pos,sdTriangle(pos.xy,p0,p1,p2),h);
 }
 
+const float PI=3.14159265359;
+
 float sdTriangle3D(in vec3 pos,in vec2 A,in vec2 B,in vec2 C,in float xMax,in float yMax,in float zMax)
 {
     vec2 xyMax=vec2(xMax,yMax);
