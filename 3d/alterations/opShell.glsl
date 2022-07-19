@@ -9,14 +9,14 @@ float opOffset(float d,float v)
     return d-v;
 }
 
-float opIntersection(float d1,float d2)
+float opCrossing(float d1,float d2)
 {
     return max(d1,d2);
 }
 
 float opDifference(float d1,float d2)
 {
-    return opIntersection(d1,opInverse(d2));
+    return opCrossing(d1,opInverse(d2));
 }
 
 float opClearance(float d1,float d2,float v)
